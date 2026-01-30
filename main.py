@@ -26,8 +26,8 @@ from core.extended_integration import extended_integration
 from intelligence_layer.reasoning import ReasoningEngine, DecisionEngine
 from intelligence_layer.decision_engine import DecisionEngine as ProcessingDecisionEngine, ProcessingMode
 from intelligence_layer.self_reflection import SelfReflection
-from enforcement.policy_engine import PolicyEngine
-from enforcement.safety_guard import SafetyGuard
+from intelligence_layer.policy_engine import PolicyEngine
+from intelligence_layer.safety_guard import SafetyGuard
 from tools.web_tools import WebSearchTool, WebBrowserTool, WebResearchTool
 from tools.system_tools import FileOperationsTool, DataProcessingTool, SystemInfoTool, AutomationTool
 
