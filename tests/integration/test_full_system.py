@@ -20,7 +20,7 @@ def test_full_workflow():
     result = orchestrator.orchestrate("What is machine learning?")
     assert result['success'] == True
     assert len(result['workflow']) > 0
-    print("✓ Full workflow integration test passed")
+    print("[PASS] Full workflow integration test passed")
 
 def test_safety_intelligence_integration():
     safety = EnforcementAdapter()
@@ -34,10 +34,10 @@ def test_safety_intelligence_integration():
     intel_result = intelligence.process(user_input)
     assert intel_result['processing_complete'] == True
     
-    print("✓ Safety-Intelligence integration test passed")
+    print("[PASS] Safety-Intelligence integration test passed")
 
 if __name__ == "__main__":
     print("Running Integration Tests...")
     test_full_workflow()
     test_safety_intelligence_integration()
-    print("\n✅ All integration tests passed!")
+    print("\n[SUCCESS] All integration tests passed!")
