@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-30T15:24:43.085188",
+  "agents": "OK",
+  "reasoning": "OK",
+  "enforcement": "OK",
+  "tools": "OK",
+  "memory": "OK",
+  "api": "OK",
+  "llm_router": "OK",
+  "extended_integration": "OK",
+  "repo_coverage": "100%",
+  "details": {
+    "agents": "AgentManager loaded successfully",
+    "reasoning": "ReasoningEngine functional",
+    "enforcement": "Policy & Safety Guard active",
+    "tools": "Web & System tools loaded",
+    "memory": "Memory stats: {'short_term_entries': 0, 'long_term_entries': 0, 'user_profiles': 0, 'active_sessions': 0}",
+    "llm_router": "Providers: 0",
+    "api": "FastAPI app loaded",
+    "extended_integration": {
+      "initialized": false,
+      "capabilities_count": 0,
+      "capabilities": []
+    }
+  },
+  "failures": []
+}

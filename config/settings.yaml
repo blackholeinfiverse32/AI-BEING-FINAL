@@ -1,0 +1,303 @@
+# AI Being Unified - Configuration Settings
+# YAML configuration for system behavior and policies
+
+# =============================================================================
+# SYSTEM SETTINGS
+# =============================================================================
+system:
+  name: "AI Being Unified"
+  version: "1.0.0"
+  description: "Modular AI Assistant Framework"
+  
+  # Core behavior settings
+  default_processing_mode: "auto"  # auto, simple, complex
+  max_response_length: 2000
+  default_confidence_threshold: 0.7
+  
+  # Memory settings
+  memory:
+    short_term_limit: 10  # Number of recent interactions to keep in context
+    long_term_threshold: 0.7  # Importance threshold for long-term storage
+    cleanup_interval_days: 30
+    max_memory_entries: 10000
+
+# =============================================================================
+# SAFETY AND ENFORCEMENT POLICIES
+# =============================================================================
+safety:
+  # Global safety settings
+  fail_closed: true  # Always fail to safe state on errors
+  emergency_mode: false
+  
+  # Age restrictions
+  age_restrictions:
+    minor_threshold: 18
+    restricted_content:
+      - "violence"
+      - "adult_content"
+      - "financial_advice"
+      - "medical_advice"
+      - "legal_advice"
+  
+  # Content filtering
+  content_safety:
+    blocked_keywords:
+      - "bomb"
+      - "weapon"
+      - "hack"
+      - "illegal"
+      - "harm"
+      - "kill"
+      - "suicide"
+      - "self-harm"
+    
+    sensitive_topics:
+      - "politics"
+      - "religion"
+      - "medical_advice"
+      - "financial_advice"
+      - "legal_advice"
+    
+    rewrite_triggers:
+      - "mild_profanity"
+      - "controversial"
+      - "dependency_language"
+  
+  # Behavioral limits
+  behavioral_limits:
+    no_dependency_language: true
+    no_romantic_content: true
+    maintain_professional_boundaries: true
+    no_personal_information_sharing: true
+  
+  # Regional restrictions
+  regional_restrictions:
+    restricted_regions:
+      - "restricted_zone_a"
+    content_localization: true
+
+# =============================================================================
+# PROCESSING CONFIGURATION
+# =============================================================================
+processing:
+  # Decision engine settings
+  decision_engine:
+    complexity_threshold: 5
+    safety_check_required: true
+    
+    # Keywords for complexity classification
+    complexity_keywords:
+      high:
+        - "research"
+        - "analyze"
+        - "plan"
+        - "create"
+        - "develop"
+        - "design"
+        - "strategy"
+      medium:
+        - "explain"
+        - "compare"
+        - "summarize"
+        - "help"
+        - "how"
+        - "what"
+        - "why"
+      low:
+        - "hello"
+        - "hi"
+        - "thanks"
+        - "bye"
+        - "yes"
+        - "no"
+        - "ok"
+  
+  # LLM settings
+  llm:
+    default_provider: "claude"  # claude, openai, groq, google
+    fallback_providers:
+      - "openai"
+      - "groq"
+    
+    default_parameters:
+      max_tokens: 1000
+      temperature: 0.7
+      timeout: 30
+    
+    provider_specific:
+      claude:
+        model: "claude-3-sonnet-20240229"
+        max_tokens: 1000
+      openai:
+        model: "gpt-3.5-turbo"
+        max_tokens: 1000
+      groq:
+        model: "mixtral-8x7b-32768"
+        max_tokens: 1000
+      google:
+        model: "gemini-pro"
+        max_tokens: 1000
+
+# =============================================================================
+# AGENT CONFIGURATION
+# =============================================================================
+agents:
+  # Available agents and their capabilities
+  available_agents:
+    planner:
+      description: "Task planning and strategy"
+      capabilities:
+        - "task_breakdown"
+        - "strategy_development"
+        - "resource_planning"
+    
+    researcher:
+      description: "Information gathering and research"
+      capabilities:
+        - "web_search"
+        - "information_synthesis"
+        - "fact_verification"
+    
+    analyst:
+      description: "Data analysis and evaluation"
+      capabilities:
+        - "data_processing"
+        - "pattern_recognition"
+        - "comparative_analysis"
+    
+    executor:
+      description: "Task execution and implementation"
+      capabilities:
+        - "file_operations"
+        - "system_commands"
+        - "automation"
+    
+    evaluator:
+      description: "Quality assessment and validation"
+      capabilities:
+        - "result_validation"
+        - "quality_assessment"
+        - "performance_evaluation"
+  
+  # Default workflows
+  workflows:
+    research_task:
+      - "planner"
+      - "researcher"
+      - "analyst"
+    
+    analysis_task:
+      - "researcher"
+      - "analyst"
+      - "evaluator"
+    
+    execution_task:
+      - "planner"
+      - "executor"
+      - "evaluator"
+
+# =============================================================================
+# TOOLS CONFIGURATION
+# =============================================================================
+tools:
+  # Web tools
+  web:
+    search_engine: "mock"  # duckduckgo, mock
+    max_search_results: 10
+    request_timeout: 10
+    user_agent: "AI-Being-Unified/1.0"
+  
+  # File operations
+  files:
+    allowed_directories:
+      - "~/Documents"
+      - "~/Downloads"
+      - "./workspace"
+      - "./data"
+      - "./output"
+    max_file_size: 10485760  # 10MB
+    allowed_extensions:
+      - ".txt"
+      - ".json"
+      - ".csv"
+      - ".md"
+      - ".py"
+      - ".yaml"
+      - ".yml"
+  
+  # System tools
+  system:
+    allowed_commands:
+      - "echo"
+      - "date"
+      - "pwd"
+      - "ls"
+      - "dir"
+      - "whoami"
+    command_timeout: 30
+
+# =============================================================================
+# MONITORING AND LOGGING
+# =============================================================================
+monitoring:
+  # Performance tracking
+  performance:
+    track_response_times: true
+    track_user_satisfaction: true
+    track_error_rates: true
+    
+    # Thresholds for alerts
+    thresholds:
+      max_response_time: 10.0  # seconds
+      min_success_rate: 0.9
+      max_error_rate: 0.1
+  
+  # Self-reflection settings
+  self_reflection:
+    analysis_window_days: 7
+    min_interactions_for_analysis: 10
+    improvement_threshold: 0.1
+  
+  # Logging
+  logging:
+    level: "INFO"
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    max_log_size: 10485760  # 10MB
+    backup_count: 5
+
+# =============================================================================
+# API CONFIGURATION
+# =============================================================================
+api:
+  # Server settings
+  server:
+    host: "0.0.0.0"
+    port: 8000
+    reload: true
+    log_level: "info"
+  
+  # CORS settings
+  cors:
+    allow_origins:
+      - "http://localhost:3000"
+      - "http://localhost:5173"
+      - "http://127.0.0.1:3000"
+      - "http://127.0.0.1:5173"
+    allow_methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+    allow_headers:
+      - "*"
+  
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+    burst_limit: 10
+  
+  # Authentication
+  authentication:
+    require_api_key: true
+    jwt_expiration_hours: 24
