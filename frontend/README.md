@@ -1,28 +1,32 @@
-# Frontend - AI Being Unified
+# BHIV Orchestrator UI
 
-## Quick Start
+A minimal web UI for the BHIV AI Assistant orchestration flow. Allows users to enter a message and see the system's summary, decision, and execution results.
 
-1. Make sure the API server is running:
-   ```bash
-   python main.py --mode server
+## APIs Consumed
+
+- `POST /api/summarize`
+- `POST /api/decision_hub`
+- `POST /orchestrate`
+
+## How to Run Locally
+
+1. Install dependencies: `npm install`
+2. Set environment variables in `.env.local`:
    ```
+   VITE_API_BASE_URL=http://127.0.0.1:8000
+   VITE_API_KEY=bhiv_demo_key_12345
+   ```
+3. Start the dev server: `npm run dev`
+4. Open http://localhost:5173/orchestrator
 
-2. Open `index.html` in your web browser
+## Live Vercel URL
 
-3. Start chatting with the AI!
+[https://bhiv-orchestrator.vercel.app](https://bhiv-orchestrator.vercel.app) (placeholder - actual deployment required)
 
-## Features
+## Screenshots
 
-- Real-time chat interface
-- Automatic API authentication
-- Response confidence display
-- Processing mode indicator
-- Clean, modern UI
+### Mobile
+![Mobile Screenshot](screenshots/mobile.png)
 
-## Configuration
-
-The frontend is pre-configured to connect to:
-- API URL: `http://localhost:8000/api/chat`
-- API Key: `ai_being_unified_demo_key_12345`
-
-To change these, edit the JavaScript variables in `index.html`.
+### Desktop
+![Desktop Screenshot](screenshots/desktop.png)

@@ -1,68 +1,89 @@
-"""Intelligence Core - Advanced reasoning and decision making"""
-from typing import Dict, Any, List
-from dataclasses import dataclass
-
-@dataclass
-class ReasoningResult:
-    conclusion: str
-    confidence: float
-    reasoning_steps: List[str]
-    evidence: List[str]
+from typing import Dict, Tuple, Any
 
 class IntelligenceCore:
     def __init__(self):
-        self.knowledge_base = {}
-        self.reasoning_history = []
-    
-    def reason(self, query: str, context: Dict[str, Any] = None) -> ReasoningResult:
-        steps = []
-        evidence = []
-        
-        steps.append(f"Analyzing query: {query[:50]}...")
-        query_type = self._classify_query(query)
-        evidence.append(f"Query classified as: {query_type}")
-        
-        steps.append("Gathering relevant knowledge")
-        relevant_knowledge = self._get_relevant_knowledge(query, context)
-        evidence.extend(relevant_knowledge)
-        
-        steps.append("Applying logical reasoning")
-        conclusion = self._apply_reasoning(query, relevant_knowledge, context)
-        
-        confidence = self._calculate_confidence(query, relevant_knowledge)
-        
-        result = ReasoningResult(
-            conclusion=conclusion,
-            confidence=confidence,
-            reasoning_steps=steps,
-            evidence=evidence
-        )
-        
-        self.reasoning_history.append(result)
-        return result
-    
-    def _classify_query(self, query: str) -> str:
-        query_lower = query.lower()
-        if any(word in query_lower for word in ['what', 'define', 'explain']):
-            return 'informational'
-        elif any(word in query_lower for word in ['how', 'guide', 'steps']):
-            return 'procedural'
-        elif any(word in query_lower for word in ['why', 'reason', 'cause']):
-            return 'causal'
+        pass
+
+    def process_interaction(
+        self,
+        context: Dict[str, Any],
+        karma_data: Dict[str, Any],
+        bucket_data: Dict[str, Any],
+        message_content: str = ""
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        user_age = context.get("user_age", 18)
+        region = context.get("region", "unknown")
+        risk_signal = karma_data.get("risk_signal", "low")
+        karma_score = karma_data.get("karma_score", 50)
+
+        gating_flags = []
+
+        if user_age < 18:
+            gating_flags.append("age_gate")
+            gating_flags.append("minor_detected")
+
+        if risk_signal == "high" or karma_score < 30:
+            gating_flags.append("high_risk")
+
+        # Basic Emotion Detection
+        behavioral_state = "neutral"
+        if risk_signal == "high":
+            behavioral_state = "defensive"
         else:
-            return 'general'
-    
-    def _get_relevant_knowledge(self, query: str, context: Dict[str, Any] = None) -> List[str]:
-        knowledge = []
-        if context:
-            knowledge.append(f"Context provided: {len(context)} items")
-        knowledge.append("Using general knowledge base")
-        return knowledge
-    
-    def _apply_reasoning(self, query: str, knowledge: List[str], context: Dict[str, Any] = None) -> str:
-        return f"Based on analysis of '{query[:30]}...' and available knowledge, proceeding with informed response"
-    
-    def _calculate_confidence(self, query: str, knowledge: List[str]) -> float:
-        base_confidence = 0.7
-        knowledge_boost = min(0.2, len(knowledge) * 0.05)
-        return min(1.0, base_confidence + knowledge_boost)
+            behavioral_state = self._detect_emotion(message_content)
+
+        # Determine Expression Profile based on State
+        expression_profile = "medium"
+        if behavioral_state == "happy":
+            expression_profile = "high"
+
+        embodiment_output = {
+            "behavioral_state": behavioral_state,
+            "speech_mode": "chat",
+            "constraints": gating_flags,
+            "confidence": "medium",
+            "safe_mode": "on" if risk_signal == "high" else "adaptive",
+            "expression_profile": expression_profile
+        }
+
+        bucket_write = {
+            "baseline_emotional_band": bucket_data.get("baseline_emotional_band", "neutral"),
+            "previous_state_anchor": bucket_data.get("previous_state_anchor", "neutral"),
+            "region": region,
+            "updates": {
+                "risk_signal": risk_signal,
+                "karma_score": karma_score
+            }
+        }
+
+        return embodiment_output, bucket_write
+
+    def _detect_emotion(self, message: str) -> str:
+        msg = message.lower()
+        
+        # Happy / Excited
+        if any(w in msg for w in ["happy", "excited", "great", "awesome", "love", "amazing", "good news", "yay"]):
+            return "happy"
+            
+        # Sad / Vulnerable
+        if any(w in msg for w in ["sad", "depressed", "lonely", "hurt", "crying", "grief", "miss"]):
+            return "sad"
+            
+        # Anxious / Fear
+        if any(w in msg for w in ["scared", "anxious", "worried", "fear", "nervous", "panic"]):
+            return "anxious"
+            
+        # Frustrated / Upset
+        if any(w in msg for w in ["upset", "angry", "frustrated", "annoyed", "mad", "disappointed", "listen to each other"]):
+            return "frustrated"
+            
+        # Confused
+        if any(w in msg for w in ["confused", "don't understand", "what?", "huh", "explain"]):
+            return "confused"
+
+        # Curious
+        if any(w in msg for w in ["why", "how", "what is", "tell me about"]):
+            return "curious"
+
+        return "neutral"
+

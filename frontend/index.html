@@ -1,98 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Being Unified - Chat Interface</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
-        .chat-box { background: white; border-radius: 10px; padding: 20px; min-height: 400px; max-height: 500px; overflow-y: auto; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .message { margin-bottom: 15px; padding: 10px 15px; border-radius: 8px; max-width: 80%; }
-        .user-message { background: #667eea; color: white; margin-left: auto; text-align: right; }
-        .ai-message { background: #e9ecef; color: #333; }
-        .input-area { display: flex; gap: 10px; }
-        input { flex: 1; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
-        button { padding: 15px 30px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:hover { background: #5568d3; }
-        .status { text-align: center; color: #666; margin-top: 10px; font-size: 14px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🤖 AI Being Unified</h1>
-            <p>Intelligent AI Assistant</p>
-        </div>
-        
-        <div class="chat-box" id="chatBox">
-            <div class="message ai-message">
-                Hello! I'm AI Being Unified. How can I help you today?
-            </div>
-        </div>
-        
-        <div class="input-area">
-            <input type="text" id="userInput" placeholder="Type your message..." onkeypress="if(event.key==='Enter') sendMessage()">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-        
-        <div class="status" id="status"></div>
-    </div>
-
-    <script>
-        const API_URL = 'http://localhost:8000/api/chat';
-        const API_KEY = 'ai_being_unified_demo_key_12345';
-
-        async function sendMessage() {
-            const input = document.getElementById('userInput');
-            const message = input.value.trim();
-            
-            if (!message) return;
-            
-            addMessage(message, 'user');
-            input.value = '';
-            
-            document.getElementById('status').textContent = 'AI is thinking...';
-            
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-API-Key': API_KEY
-                    },
-                    body: JSON.stringify({
-                        message: message,
-                        user_id: 'web_user',
-                        session_id: 'web_session'
-                    })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok) {
-                    addMessage(data.response, 'ai');
-                    document.getElementById('status').textContent = `Mode: ${data.processing_mode} | Confidence: ${(data.confidence * 100).toFixed(0)}%`;
-                } else {
-                    addMessage('Error: ' + (data.detail || 'Failed to get response'), 'ai');
-                    document.getElementById('status').textContent = 'Error occurred';
-                }
-            } catch (error) {
-                addMessage('Error: Could not connect to server. Make sure the API is running.', 'ai');
-                document.getElementById('status').textContent = 'Connection error';
-            }
-        }
-
-        function addMessage(text, type) {
-            const chatBox = document.getElementById('chatBox');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${type}-message`;
-            messageDiv.textContent = text;
-            chatBox.appendChild(messageDiv);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BHIV AI Assistant</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
