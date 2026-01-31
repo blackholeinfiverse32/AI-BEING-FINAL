@@ -1,0 +1,63 @@
+[PASS] main.py
+[PASS] test_ai_assistant_integration.py
+======================================================================
+AI BEING UNIFIED - API TEST
+======================================================================
+
+1. Testing Health Check...
+[FAIL] test_api.py
+        Error: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by N
+[FAIL] tests\enforcement\test_enforcement_modules.py
+        Error: cannot import name 'enforce' from 'backend.enforcement.enforcement_engine' (c:\Users\Microsoft\Deskt
+[FAIL] tests\integration\test_full_system.py
+        Error: cannot import name 'ResponseComposerEngine' from 'backend.intelligence.engine' (c:\Users\Microsoft\D
+[FAIL] tests\intelligence\test_intelligence_modules.py
+        Error: cannot import name 'ResponseComposerEngine' from 'backend.intelligence.engine' (c:\Users\Microsoft\D
+[PASS] tests\safety\test_safety_validators.py
+[PASS] tests\test_agents.py
+[PASS] tests\test_ai_assistant_integration.py
+[PASS] tests\test_e2e.py
+[PASS] tests\test_enforcement.py
+[PASS] tests\test_failures.py
+[PASS] tests\test_reasoning.py
+[PASS] tools\__init__.py
+[PASS] tools\calculator_tool.py
+[PASS] tools\system_tools.py
+[PASS] tools\web_tools.py
+================================================================================
+
+RESULTS:
+Total Files: 92
+Passed: 79
+Failed: 13
+Success Rate: 85.9%
+
+[CRITICAL] 13 files failed to import
+
+Failed Files:
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\config_loader.py
+    Missing config: enforcement.yaml
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\enforcement_engine.py
+    No module named '__version__'
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\enforcement_gateway.py
+    cannot import name 'enforce' from 'backend.enforcement.enforcement_engine' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\enforcement_engine.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\logs\bucket_logger.py
+    No module named '__version__'
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\utils\deterministic_trace.py
+    No module named '__version__'
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\__init__.py
+    cannot import name 'LiteCore' from 'backend.intelligence.lite_core' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\lite_core.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\context_continuity.py
+    cannot import name 'LiteCore' from 'backend.intelligence.lite_core' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\lite_core.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\engine.py
+    cannot import name 'LiteCore' from 'backend.intelligence.lite_core' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\lite_core.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\narration.py
+    cannot import name 'LiteCore' from 'backend.intelligence.lite_core' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\lite_core.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\test_api.py
+    HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000199EDD01420>: Failed to estab
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\tests\enforcement\test_enforcement_modules.py
+    cannot import name 'enforce' from 'backend.enforcement.enforcement_engine' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\enforcement\enforcement_engine.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\tests\integration\test_full_system.py
+    cannot import name 'ResponseComposerEngine' from 'backend.intelligence.engine' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\engine.py)
+  - c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\tests\intelligence\test_intelligence_modules.py
+    cannot import name 'ResponseComposerEngine' from 'backend.intelligence.engine' (c:\Users\Microsoft\Desktop\integration endpoints\ai_being_unified\backend\intelligence\engine.py)

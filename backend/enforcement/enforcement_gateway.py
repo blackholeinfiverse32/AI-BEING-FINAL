@@ -11,16 +11,16 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Dict, Any, List, Optional
 
-from enforcement_engine import enforce
-from models.enforcement_input import EnforcementInput
-from utils.deterministic_trace import generate_trace_id
+from .enforcement_engine import enforce
+from .models.enforcement_input import EnforcementInput
+from .utils.deterministic_trace import generate_trace_id
 
-from enforcement.intelligence_input_validator import (
+from .enforcement.intelligence_input_validator import (
     validate_intelligence_payload,
     IntelligenceContractViolation,
 )
 
-from enforcement_verdict import EnforcementVerdict
+from .enforcement_verdict import EnforcementVerdict
 
 
 # -------------------------------------------------

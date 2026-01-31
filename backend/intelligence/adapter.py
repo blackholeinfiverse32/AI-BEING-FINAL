@@ -1,7 +1,7 @@
 from typing import Dict, Any, List
 import logging
 import json
-from .schemas import IntelligenceInput
+from backend.intelligence.schemas import IntelligenceInput
 
 
 class IntelligenceAdapter:

@@ -223,7 +223,8 @@ Edit `.env` file to customize:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `API_KEY` | API authentication key | `ai_being_unified_demo_key_12345` |
+| `API_KEY` | API authentication key | `a
+` |
 | `ANTHROPIC_API_KEY` | Claude API key | - |
 | `OPENAI_API_KEY` | OpenAI API key | - |
 | `EMERGENCY_MODE` | Block all interactions | `false` |

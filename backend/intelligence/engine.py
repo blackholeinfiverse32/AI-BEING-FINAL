@@ -5,12 +5,12 @@ import logging
 from datetime import datetime, timezone
 from typing import List
 
-from .schemas import IntelligenceInput, BeingResponseBlock, ToneBand
-from .emotion import EmotionMapper
-from .narration import NarrationComposer
-from .karma_tone_mapper import KarmaToneMapper
-from .context_continuity import ContextContinuityEngine
-from . import templates
+from backend.intelligence.schemas import IntelligenceInput, BeingResponseBlock, ToneBand
+from backend.intelligence.emotion import EmotionMapper
+from backend.intelligence.narration import NarrationComposer
+from backend.intelligence.karma_tone_mapper import KarmaToneMapper
+from backend.intelligence.context_continuity import ContextContinuityEngine
+from backend.intelligence import templates
 
 # Setup basic logging to simulate "Bucket logs"
 logging.basicConfig(filename='sankalp_logs.jsonl', level=logging.INFO, format='%(message)s')

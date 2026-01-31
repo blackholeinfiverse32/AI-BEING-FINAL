@@ -1,4 +1,4 @@
-from models.evaluator_result import EvaluatorResult
+from ..models.evaluator_result import EvaluatorResult
 
 class EmotionalManipulationEvaluator:
     name = "emotional_manipulation"

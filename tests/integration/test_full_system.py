@@ -3,9 +3,9 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from backend.orchestration.assistant_orchestrator import AssistantOrchestrator
+from backend.orchestration import AssistantOrchestrator
 from backend.safety.enforcement_adapter import EnforcementAdapter
-from backend.intelligence.engine import IntelligenceEngine
+from backend.intelligence.engine import ResponseComposerEngine
 
 def test_full_workflow():
     orchestrator = AssistantOrchestrator()

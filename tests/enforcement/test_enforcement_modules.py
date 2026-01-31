@@ -3,8 +3,8 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from backend.enforcement.enforcement_engine import EnforcementEngine
-from backend.enforcement.enforcement_gateway import EnforcementGateway
+from backend.enforcement.enforcement_engine import enforce
+from backend.enforcement.enforcement_gateway import app
 from backend.enforcement.executor_runtime import ExecutorRuntime
 
 def test_enforcement_engine():

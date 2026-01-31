@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from backend.intelligence.core import IntelligenceCore
-from backend.intelligence.engine import IntelligenceEngine
-from backend.intelligence.lite_core import LiteCore
+from backend.intelligence.engine import ResponseComposerEngine
+from backend.intelligence.lite_core import IntelligenceCore as LiteCore
 
 def test_intelligence_core():
     core = IntelligenceCore()

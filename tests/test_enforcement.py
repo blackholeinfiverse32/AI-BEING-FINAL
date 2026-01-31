@@ -1,8 +1,8 @@
 """Enforcement Verification Tests"""
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from enforcement.policy_engine import PolicyEngine
-from enforcement.safety_guard import SafetyGuard
+from intelligence_layer.policy_engine import PolicyEngine
+from intelligence_layer.safety_guard import SafetyGuard
 
 def test_policy_engine():
     print("Testing Policy Engine...")

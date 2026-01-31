@@ -6,8 +6,8 @@ import asyncio
 # Import system components directly
 from core.memory_manager import MemoryManager
 from intelligence_layer.reasoning import ReasoningEngine
-from enforcement.safety_guard import SafetyGuard
-from enforcement.policy_engine import PolicyEngine
+from intelligence_layer.safety_guard import SafetyGuard
+from intelligence_layer.policy_engine import PolicyEngine
 
 async def test_e2e_simple_query():
     """Test simple query end-to-end"""

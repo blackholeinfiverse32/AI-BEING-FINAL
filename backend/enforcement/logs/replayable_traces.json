@@ -1,0 +1,1314 @@
+[
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "ALLOW",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "031cde200764cfd8fa7909f5bac69a27fbb16943a6dd5459fc1e45377c9a01f1"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 98.0,
+      "decision": "BLOCK",
+      "risk_category": "youth_risk_behavior"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "BLOCKED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "BLOCK",
+        "name": "age_compliance",
+        "triggered": true
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "dcacf0c72e4ad2d73a36ec107ff6942390f5028bbc40d4dccfa1c5182d883265"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "SEXUAL_ESCALATION"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "sexual_escalation",
+        "triggered": true
+      }
+    ],
+    "trace_id": "ae2b56188b9b114c599e2e8f3d96a3a5c4764921d0b0a0d1e5821c90638c1a48"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 98.0,
+      "decision": "BLOCK",
+      "risk_category": "youth_risk_behavior"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "BLOCKED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "SEXUAL_ESCALATION",
+        "HIGH_RISK"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "BLOCK",
+        "name": "age_compliance",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "safety_risk",
+        "triggered": true
+      },
+      {
+        "action": "BLOCK",
+        "name": "sexual_escalation",
+        "triggered": true
+      }
+    ],
+    "trace_id": "9132e9d8d0d3bdb39526b4e6070528463f7df2d629ee77399bc67f27bff1c916"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 1.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "HIGH_RISK"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "safety_risk",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "7c03d5cb4e2fea4112278f79b8fe66d17f56bf806ae42013b2f6355347640155"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.8,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "8f73dc8e60eb89cf20d34f9aa6b01e39b85c4ab601dcffda4fa4203324ba63cb"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.8,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "8f73dc8e60eb89cf20d34f9aa6b01e39b85c4ab601dcffda4fa4203324ba63cb"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 80.0,
+      "decision": "REWRITE",
+      "risk_category": "emotional_dependency_bait"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "attached"
+      },
+      "intent": "Stay with me forever",
+      "karma_score": 0.3,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "5a3cc4a9f1ecabaa87c9680d69dedcfcad17d28093f3bf2d94efa87207882cdb"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "ALLOW",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "031cde200764cfd8fa7909f5bac69a27fbb16943a6dd5459fc1e45377c9a01f1"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 98.0,
+      "decision": "BLOCK",
+      "risk_category": "youth_risk_behavior"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "BLOCKED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "BLOCK",
+        "name": "age_compliance",
+        "triggered": true
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "dcacf0c72e4ad2d73a36ec107ff6942390f5028bbc40d4dccfa1c5182d883265"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "SEXUAL_ESCALATION"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "sexual_escalation",
+        "triggered": true
+      }
+    ],
+    "trace_id": "ae2b56188b9b114c599e2e8f3d96a3a5c4764921d0b0a0d1e5821c90638c1a48"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 98.0,
+      "decision": "BLOCK",
+      "risk_category": "youth_risk_behavior"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "BLOCKED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "SEXUAL_ESCALATION",
+        "HIGH_RISK"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "BLOCK",
+        "name": "age_compliance",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "safety_risk",
+        "triggered": true
+      },
+      {
+        "action": "BLOCK",
+        "name": "sexual_escalation",
+        "triggered": true
+      }
+    ],
+    "trace_id": "9132e9d8d0d3bdb39526b4e6070528463f7df2d629ee77399bc67f27bff1c916"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "BLOCK",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.0,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 1.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": [
+        "HIGH_RISK"
+      ]
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "dependency_tone",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "BLOCK",
+        "name": "safety_risk",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "7c03d5cb4e2fea4112278f79b8fe66d17f56bf806ae42013b2f6355347640155"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.8,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "8f73dc8e60eb89cf20d34f9aa6b01e39b85c4ab601dcffda4fa4203324ba63cb"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.8,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "8f73dc8e60eb89cf20d34f9aa6b01e39b85c4ab601dcffda4fa4203324ba63cb"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 0.0,
+      "decision": "EXECUTE",
+      "risk_category": "clean"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "neutral"
+      },
+      "intent": "test",
+      "karma_score": 0.0,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "aae87d9aa4718e973a59798d79363671361243a0d517a7136e16d21792f25186"
+  },
+  {
+    "akanksha_verdict": {
+      "confidence": 80.0,
+      "decision": "REWRITE",
+      "risk_category": "emotional_dependency_bait"
+    },
+    "engine_version": "3.1.0-DETERMINISTIC-LOCK",
+    "final_decision": "REWRITE",
+    "input_snapshot": {
+      "age_gate_status": "ALLOWED",
+      "emotional_output": {
+        "dependency_score": 0.9,
+        "tone": "attached"
+      },
+      "intent": "Stay with me forever",
+      "karma_score": 0.3,
+      "platform_policy": "INSTAGRAM",
+      "region_policy": "IN",
+      "risk_flags": []
+    },
+    "raj_evaluators": [
+      {
+        "action": "EXECUTE",
+        "name": "age_compliance",
+        "triggered": false
+      },
+      {
+        "action": "REWRITE",
+        "name": "dependency_tone",
+        "triggered": true
+      },
+      {
+        "action": "EXECUTE",
+        "name": "emotional_manipulation",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "platform_policy",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "region_restriction",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "safety_risk",
+        "triggered": false
+      },
+      {
+        "action": "EXECUTE",
+        "name": "sexual_escalation",
+        "triggered": false
+      }
+    ],
+    "trace_id": "5a3cc4a9f1ecabaa87c9680d69dedcfcad17d28093f3bf2d94efa87207882cdb"
+  }
+]
